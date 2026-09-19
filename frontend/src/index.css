@@ -1,0 +1,801 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  min-height: 70px;
+  padding: 0 7%;
+
+  background: #1e3a8a;
+  border-bottom: 1px solid #172f73;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: #dbeafe;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  padding: 9px 12px;
+  border-radius: 6px;
+
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+  background: #3154ad;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+  width: 84%;
+  max-width: 1120px;
+  margin: auto;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 75px 0 60px;
+}
+
+.eyebrow,
+.section-label {
+  color: #315bea;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  color: #111827;
+
+  font-size: 48px;
+  line-height: 1.1;
+
+  letter-spacing: -1.2px;
+
+  margin-bottom: 18px;
+}
+
+.hero-text {
+  max-width: 610px;
+
+  color: #6b7280;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  color: #111827;
+  font-size: 24px;
+}
+
+
+/* =========================
+   ALERT MESSAGES
+========================= */
+
+.alert {
+  border-radius: 8px;
+
+  padding: 12px 15px;
+
+  margin-bottom: 18px;
+
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.success-alert {
+  background: #ecfdf3;
+  border: 1px solid #bbf7d0;
+  color: #18794e;
+}
+
+.error-alert {
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+}
+
+
+/* =========================
+   TASK OVERVIEW
+========================= */
+
+.overview-section {
+  margin-bottom: 42px;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+}
+
+.overview-card {
+  background: #ffffff;
+
+  border: 1px solid #e3e7ef;
+  border-radius: 12px;
+
+  padding: 24px;
+
+  box-shadow:
+    0 4px 14px rgba(31, 41, 55, 0.04);
+
+  transition: 0.2s;
+}
+
+.overview-card:hover {
+  border-color: #cbd5f5;
+
+  transform: translateY(-2px);
+}
+
+.overview-card span {
+  display: block;
+
+  color: #6b7280;
+
+  font-size: 12px;
+
+  margin-bottom: 10px;
+}
+
+.overview-card strong {
+  display: block;
+
+  color: #111827;
+
+  font-size: 32px;
+
+  margin-bottom: 5px;
+}
+
+.overview-card p {
+  color: #9ca3af;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   ADD / EDIT TASK SECTION
+========================= */
+
+.add-section {
+  background: #ffffff;
+
+  border: 1px solid #e0e5ee;
+  border-radius: 14px;
+
+  padding: 30px;
+
+  margin-bottom: 48px;
+
+  box-shadow:
+    0 8px 25px rgba(31, 41, 55, 0.05);
+}
+
+.add-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.add-header .section-label {
+  color: #315bea;
+}
+
+.add-header h2 {
+  color: #111827;
+
+  font-size: 24px;
+}
+
+.plus-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 9px;
+
+  background: #eef2ff;
+
+  color: #315bea;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.add-section form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  background: #f9fafb;
+
+  border: 1px solid #dfe4ec;
+
+  color: #111827;
+
+  border-radius: 8px;
+
+  padding: 12px 13px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.form-group input {
+  height: 45px;
+}
+
+.form-group textarea {
+  min-height: 95px;
+
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+
+  border-color: #6b86ed;
+
+  box-shadow:
+    0 0 0 3px rgba(49, 91, 234, 0.08);
+}
+
+
+/* =========================
+   VALIDATION ERROR
+========================= */
+
+.field-error {
+  color: #dc2626;
+
+  font-size: 11px;
+
+  margin-top: 6px;
+}
+
+
+/* =========================
+   FORM BUTTONS
+========================= */
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.add-button {
+  min-height: 45px;
+
+  width: fit-content;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 0 21px;
+
+  background: #315bea;
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.add-button:hover {
+  background: #244bd0;
+}
+
+.add-button:disabled {
+  background: #9aa9d6;
+
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  min-height: 45px;
+
+  border: 1px solid #d9dee8;
+
+  border-radius: 8px;
+
+  padding: 0 18px;
+
+  background: #ffffff;
+  color: #6b7280;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.cancel-button:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+
+/* =========================
+   MY TASKS
+========================= */
+
+.tasks-section {
+  margin-bottom: 50px;
+}
+
+.task-badge {
+  background: #eef2ff;
+  color: #315bea;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+
+/* =========================
+   TASK CARD
+========================= */
+
+.task-card {
+  background: #ffffff;
+
+  border: 1px solid #e2e6ed;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+
+  box-shadow:
+    0 4px 14px rgba(31, 41, 55, 0.035);
+
+  transition: 0.2s;
+}
+
+.task-card:hover {
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 7px 20px rgba(31, 41, 55, 0.06);
+}
+
+
+/* =========================
+   TASK DETAILS
+========================= */
+
+.task-details {
+  width: 100%;
+  min-width: 0;
+}
+
+.task-title-row {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+}
+
+.task-title-row h3 {
+  flex: 1;
+  min-width: 0;
+
+  color: #1f2937;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.task-details p {
+  color: #6b7280;
+
+  font-size: 13px;
+  line-height: 1.6;
+
+  word-break: break-word;
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+  flex-shrink: 0;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.pending-status {
+  background: #fff7e6;
+  color: #b7791f;
+}
+
+.completed-status {
+  background: #eaf8ef;
+  color: #26804a;
+}
+
+.completed {
+  text-decoration: line-through;
+
+  color: #9ca3af !important;
+}
+
+
+/* =========================
+   TASK ACTIONS
+   BELOW TASK
+========================= */
+
+.task-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  width: 100%;
+}
+
+.task-actions button {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 9px 15px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+
+/* COMPLETE */
+
+.complete-button {
+  background: #eef2ff;
+  color: #315bea;
+}
+
+.complete-button:hover {
+  background: #e1e7ff;
+}
+
+
+/* EDIT */
+
+.edit-button {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.edit-button:hover {
+  background: #e5e7eb;
+}
+
+
+/* DELETE */
+
+.delete-button {
+  background: #fff0f0;
+  color: #d04444;
+}
+
+.delete-button:hover {
+  background: #ffe1e1;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.empty-state {
+  background: #ffffff;
+
+  border: 1px solid #e2e6ed;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  padding: 50px 20px;
+}
+
+.empty-state h3 {
+  color: #374151;
+
+  margin-bottom: 8px;
+}
+
+.empty-state p {
+  color: #8b95a5;
+
+  font-size: 13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+  background: #ffffff;
+
+  border: 1px solid #e2e6ed;
+
+  border-radius: 13px;
+
+  padding: 30px;
+
+  margin-bottom: 50px;
+
+  box-shadow:
+    0 4px 15px rgba(31, 41, 55, 0.035);
+}
+
+.about-section h2 {
+  color: #111827;
+
+  font-size: 23px;
+
+  margin-bottom: 10px;
+}
+
+.about-section p:last-child {
+  max-width: 680px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #111827;
+
+  color: #9ca3af;
+
+  text-align: center;
+
+  padding: 22px;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-links a {
+    padding: 8px 8px;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .navbar {
+    min-height: auto;
+
+    padding: 17px 5%;
+
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .nav-links {
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 3px;
+  }
+
+  .hero {
+    padding: 50px 0 40px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .add-section {
+    padding: 23px;
+  }
+
+  .task-title-row {
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .task-actions {
+    flex-wrap: wrap;
+  }
+
+  .task-actions button {
+    flex: 1;
+    min-width: 90px;
+  }
+
+  .form-buttons {
+    flex-wrap: wrap;
+  }
+}
