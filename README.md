@@ -51,7 +51,7 @@ The application allows users to create, view, update, complete, and delete tasks
 
 ## Project Structure
 
-
+```text
 Task-Tracker/
 │
 ├── backend/
@@ -71,27 +71,28 @@ Task-Tracker/
 │
 ├── .gitignore
 └── README.md
-
+```
 
 ## API Endpoints
 
-| Method | Endpoint       | Purpose         |
-| ------ | -------------- | --------------- |
-| GET    | /tasks/      | Get all tasks     |
-| POST   | /tasks/      | Create a new task |
-| PUT    | /tasks/<id>/ | Update a task     |
-| DELETE | /tasks/<id>/ | Delete a task     |
+| Method | Endpoint      | Purpose           |
+| ------ | ------------- | ----------------- |
+| GET    | `/tasks/`     | Get all tasks     |
+| POST   | `/tasks/`     | Create a new task |
+| PUT    | `/tasks/:id/` | Update a task     |
+| DELETE | `/tasks/:id/` | Delete a task     |
 
 ## How It Works
 
 The React frontend sends HTTP requests to the Django REST API.
 
-
+```text
 React Frontend
       ↓
 Django REST API
       ↓
 PostgreSQL Database
+```
 
 When a user adds, edits, completes, or deletes a task, the frontend communicates with the backend API and the changes are stored in the database.
 
